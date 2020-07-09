@@ -1,10 +1,10 @@
 # GAS + TypeScript Sample
 
-GAS を TypeScript で動かすサンプルプロジェクト
+GAS を TypeScript で動かすサンプルプロジェクト  
 Webpack + babel を使うことで、 npm に公開されている便利なパッケージを使える
 
-このサンプルでは `dayjs` を利用して現在時刻を返す処理を実装した。
-Slack App にして Slash Command で動かす想定をしているが、もちろん Slack App 以外でも利用可能。
+このサンプルでは `dayjs` を利用して現在時刻を返す処理を実装した。  
+Slack App にして Slash Command で動かす想定をしているが、もちろん Slack App 以外でも利用可能。  
 例えば GAS のトリガーを使って任意のスクリプトを定期実行することなど、一般的な用途にも使える(結局 GAS が動いてるだけなので)
 
 ## 構成
