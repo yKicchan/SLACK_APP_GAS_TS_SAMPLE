@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const GasPlugin = require("gas-webpack-plugin");
-const Es3ifyPlugin = require("es3ify-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -30,5 +29,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new GasPlugin(), new Es3ifyPlugin()],
+  plugins: [new GasPlugin()],
 };
