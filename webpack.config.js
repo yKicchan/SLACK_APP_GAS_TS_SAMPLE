@@ -5,13 +5,11 @@ const Es3ifyPlugin = require("es3ify-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  devtool: "inline-source-map",
+  devtool: false,
   context: __dirname,
-  entry: {
-    main: path.resolve(__dirname, "src", "index.ts"),
-  },
+  entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "dist"),
     filename: "index.js",
   },
   resolve: {
@@ -21,7 +19,14 @@ module.exports = {
     rules: [
       {
         test: /\.[tj]s$/,
+        exclude: /node_modules/,
         loader: "babel-loader",
+      },
+      {
+        enforce: "pre",
+        test: /\.[tj]s$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
       },
     ],
   },
