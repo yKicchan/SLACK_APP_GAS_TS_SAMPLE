@@ -6,7 +6,8 @@
   "scripts": {
     "clasp": "clasp",
     "build": "webpack",
-    "deploy": "yarn build && clasp push"
+    "deploy": "yarn build && clasp push",
+    "lint": "eslint --fix --ext .ts,.js --ignore-path .gitignore ."
   },
   "keywords": [],
   "author": "yKicchan <ykicchanapp@gmail.com>",

@@ -1,7 +1,7 @@
 import { doPost } from "./main";
 
 declare const global: {
-  [x: string]: any;
+  [x: string]: unknown;
 };
 
 global.doPost = () => doPost();

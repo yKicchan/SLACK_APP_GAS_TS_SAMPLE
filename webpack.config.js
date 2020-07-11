@@ -1,26 +1,29 @@
-const path = require('path');
-const GasPlugin = require('gas-webpack-plugin');
-const Es3ifyPlugin = require('es3ify-webpack-plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require("path");
+const GasPlugin = require("gas-webpack-plugin");
+const Es3ifyPlugin = require("es3ify-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map',
+  mode: "development",
+  devtool: "inline-source-map",
   context: __dirname,
   entry: {
-    main: path.resolve(__dirname, 'src', 'index.ts')
+    main: path.resolve(__dirname, "src", "index.ts"),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: [".ts", ".js"],
   },
   module: {
-    rules: [{
-      test: /\.[tj]s$/,
-      loader: 'babel-loader'
-    }]
+    rules: [
+      {
+        test: /\.[tj]s$/,
+        loader: "babel-loader",
+      },
+    ],
   },
-  plugins: [new GasPlugin(), new Es3ifyPlugin()]
+  plugins: [new GasPlugin(), new Es3ifyPlugin()],
 };

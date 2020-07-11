@@ -3,7 +3,7 @@ import "dayjs/locale/ja";
 
 dayjs.locale("ja");
 
-export function doPost() {
+export function doPost(): GoogleAppsScript.Content.TextOutput {
   const text = dayjs().format("YYYY年M月D日(ddd) H:m");
 
   const data: SlackData = {
