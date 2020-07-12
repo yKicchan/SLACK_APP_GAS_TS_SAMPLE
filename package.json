@@ -4,7 +4,6 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "clasp": "clasp",
     "build": "webpack",
     "deploy": "yarn build && clasp push",
     "lint": "eslint --fix --ext .ts,.js --ignore-path .gitignore ."
